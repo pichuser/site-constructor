@@ -1,0 +1,13 @@
+html(ng-app='App')
+   head
+      script(type='text/javascript', src='components/angular/angular.js')
+      script(type='text/javascript', src='js/app.js')
+      script(type='text/javascript', src='js/controllers.js')
+      script(type='text/javascript', src='js/directives.js')
+      title Конструктор сайтов
+   body(ng-controller='MainController')
+      div(style='background-color: red', id= 'test') test
+      ul
+         li(ng-repeat='s in styles')
+            |{{s.name}}
+            input(my-enter='enterCss(s);',type='text', ng-model='s.val')
